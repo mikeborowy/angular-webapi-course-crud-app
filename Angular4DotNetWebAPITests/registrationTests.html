@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/jasmine/jasmine.css" rel="stylesheet" />
+  
+    <script type="text/javascript" src="scripts/jasmine/jasmine.js"></script>
+    <script type="text/javascript" src="scripts/jasmine/jasmine-html.js"></script>
+    <script type="text/javascript" src="scripts/jasmine/console.js"></script>
+    <script type="text/javascript" src="scripts/jasmine/boot.js"></script>
+    <script type="text/javascript" src="scripts/sinon-1.9.1.js"></script>
+    
+    <script type="text/javascript" src="scripts/angular_src/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/angular_src/angular-resource.min.js"></script>
+    <script type="text/javascript" src="scripts/angular_src/angular-route.min.js"></script>
+    <script type="text/javascript" src="scripts/angular_src/angular-mocks.js"></script>
+
+
+    <script type="text/javascript" src="angular_app/registration-module.js"></script>
+    <script type="text/javascript" src="angular_app/Courses/courses-controller.js"></script>
+    <script type="text/javascript" src="angular_app/Courses/courses-repository.js"></script>
+    <script type="text/javascript" src="courses-controller-tests.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+
+            var jasminEnv = jasmin.getEnv();
+            var htmlReporter = new jasmine.TrivialReporter();
+
+            jasminEnv.addReporter(htmlReporter);
+            jasminEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+            }
+
+            window.onload = function () {
+                execJasmine();
+            }
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+        })
+    </script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>

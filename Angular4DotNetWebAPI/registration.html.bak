@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html ng-app="registrationModule">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>College Registration</title>
+    <link href="/Content/Bootstrap/ui-bootstrap-csp.css" rel="stylesheet" />
+    <link href="/Content/Bootstrap/bootstrap-slate.min.css" rel="stylesheet" />
+    <!--Angular Src START-->
+    <script src="Scripts/angular_src/angular.min.js"></script>
+    <script src="Scripts/angular_src/angular-route.min.js"></script>
+    <script src="Scripts/angular_src/angular-resource.min.js"></script>
+    <script src="Scripts/angular_src/angular-ui/ui-bootstrap.min.js"></script>
+    <!--Angular Src END-->
+    <!--Angular App Modules START-->
+    <script src="Scripts/angular_app/registration-module.js"></script>
+    <!--Courses Module--> 
+    <script src="Scripts/angular_app/Courses/courses-controller.js"></script>
+    <script src="Scripts/angular_app/Courses/courses-repository.js"></script>
+    <!--Instructors Module-->
+    <script src="Scripts/angular_app/Instructors/instructors-controller.js"></script>
+    <script src="Scripts/angular_app/Instructors/instructors-repository.js"></script>
+    <!--Account Module-->
+    <script src="Scripts/angular_app/Account/account-controller.js"></script>
+    <script src="Scripts/angular_app/Account/account-repository.js"></script>
+    <!--Angular App Modules END-->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="navbar navbar-default">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav">
+                        <li><span class="navbar-brand">Registration</span></li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <!--Remmeber to add route in main app file : Scripts\Angular\registration-module.js-->
+                        <li><a href="/Courses">Browse Courses</a></li>
+                        <!--Remmeber to add route in main app file : Scripts\Angular\registration-module.js-->
+                        <li><a href="/Instructors">Browse Instructors</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--Remmeber to add route in main app file : Scripts\Angular\registration-module.js-->
+                        <li><a href="/CreateAccount">Create Account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--html templates will be loaded here-->
+        <div ng-view></div>
+
+    </div>
+</body>
+</html>
